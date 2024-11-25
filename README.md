@@ -1,17 +1,21 @@
-# Welcome to your CDK Typescript project
+AWS VPC with EC2 and Database Subnets
 
-This is a blank project for CDK development with Typescript.
+This project demonstrates how to create an AWS Virtual Private Cloud (VPC)
+with a comprehensive network architecture for secure and scalable 
+infrastructure. The VPC includes:
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+    2 Public Subnets for hosting resources like load balancers, web servers,
+      and other publicly accessible services.
+    2 Private Subnets for EC2 instances running applications in a secure 
+      environment, isolated from the public internet.
+    2 Private Subnets for Databases, ensuring that your database resources
+      are securely placed behind firewalls with no direct access from the 
+      outside world.
 
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+The deployment is fully automated using AWS CDK to define the infrastructure 
+as code, allowing easy updates and re-deployment. This setup ensures high 
+availability and security by distributing resources across multiple 
+Availability Zones (AZs) within a region.
 
 In ./lib/old-ec2-stack.ts there is a setup for the 2 EC2 Instances that
 I'm sure is incorrect for deploying to specific AZ's, because we only
