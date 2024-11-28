@@ -1,3 +1,5 @@
+**This is a guided product during my education in Cloud Engineering**
+
 AWS VPC with EC2 and Database Subnets
 
 This project demonstrates how to create an AWS Virtual Private Cloud (VPC)
